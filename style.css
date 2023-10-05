@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #08fcc7bd;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+main{
+    background-color: #05a6f7b9;
+    width: 700px;
+    margin: auto;
+    border-radius: 20px;
+    min-height: 400px;
+}
+
+h1{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-shadow: 1px 1px 2px white;
+}
+
+label{
+    width:400px;
+    background-color: #082AFC;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px;
+}
+
+input{
+    font-size: 22px;
+    float: right;
+    margin-right: -5px;
+    height: 40px;
+    margin-top: -5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid black;
+}
+
+span{
+    position: relative;
+    left: 10px;
+    text-shadow: 1px 1px 2px black;
+}
+
+button[type = submit]#entrar, #postar, #voltar{
+    display: block;
+    margin: auto auto auto auto;
+    padding: 10px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+
+h5{
+    text-align: center;
+    font-size: 18px;
+}
+
+textarea{
+    margin: 5px 0px 0px 20px;
+    font-size: 17px;
+}
+
+button#postar{
+    margin: -30px auto auto auto;
+    float: right;
+    transform: translate(-50%, 45px);
+}
+
+div.post{
+    background-color: #082AFC;
+    width: 450px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.767);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.733);
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.747);
+}
+
+div.post>h3{
+    background-color: #08fcc7d3;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 8px;
+}
+
+input#titulo{
+    float: left;
+    width: 391px;
+    margin: 10px 0px 10px 20px;
+    border-radius: 0px;
+    font-size: 17px;
+}
+
+p#dataPost{
+    margin-left: 370px;
+    font-size: 11px;
+}
+
+input#comentario{
+    position: relative;
+    float: none;
+    margin: -15px 0px 20px 135px;
+    width: 380px;
+    height: 30px;
+    top: -20px;
+    border-radius: 0px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.705);
+    font-size: 17px;
+}
+
+button#send{
+    font-size: 30px;
+    color: #082AFC;
+    position: relative;
+    top: -10px;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.705);
+}
