@@ -142,3 +142,11 @@ span#visivel{
     font-size: 35px;
     cursor: pointer;
 }
+
+.erro{
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    color: rgba(255, 0, 0, 0.808);
+    text-shadow: 1px 1px 2px black;
+}
