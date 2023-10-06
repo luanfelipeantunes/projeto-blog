@@ -135,3 +135,10 @@ button#send{
     border: 1px solid black;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.705);
 }
+
+span#visivel{
+    float: right;
+    left: 270px;
+    font-size: 35px;
+    cursor: pointer;
+}
