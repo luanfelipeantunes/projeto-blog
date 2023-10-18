@@ -27,6 +27,29 @@
             <button type="submit" class="material-symbols-outlined" id="entrar" style="font-size: 30px;">share_windows</button>
         </form>
     </main>
-
 </body>
+
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".erro").hide();
+        var botaoEnviar = document.getElementById('entrar');
+        var inputEmail = document.getElementById('email');
+        $(document).ready(function(){
+            $("input[name='email']").blur(function(){
+                var email = $(this).val();
+                $.post("verifica-email.php", {email: email}, function(resultado){
+                    if(resultado == 'existe'){
+                        $(".erro").show();
+                        botaoEnviar.disabled = true;
+                        inputEmail.style.border = '2px solid rgba(255, 0, 0, 0.808)';
+                    }else{
+                        $(".erro").hide();
+                        botaoEnviar.disabled = false;
+                        inputEmail.style.border = '1px solid black';
+                    }
+                });
+            });
+        });
+    </script>
+    
 </html>
