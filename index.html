@@ -12,17 +12,16 @@
 <body>
 
     <main>
-        <form action="verifica-login.php" method="get">
             <h1>Login</h1>
+            <h3 class="erro">Login incorreto. Tente novamente</h3>
             <label for="loginEemail"><span class="centr">Email</span>
                 <input type="Email" name="loginEmail" id="loginEmail" required></label><br>
             <label for="loginSenha"><span class="centr">Senha</span>
                 <input type="password" name="loginSenha" id="loginSenha"
                     required><span class="material-symbols-outlined" id="visivel" onclick="verifica_senha()">visibility_off</span></label><br>
-            <button type="submit" id="entrar">Entrar</button>
+            <button type="submit" id="entrar" name="entrar">Entrar</button>
             <h5>Ou</h5>
             <h5><a href="cadastro.html">Cadastre-se</a></h5>
-        </form>
     </main>
 
 </body>
@@ -40,7 +39,25 @@
             inputSenha.type = 'text';
         }
     }
+</script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(".erro").hide();
+    $(document).ready(function(){
+        $("button[name = 'entrar']").click(function(){
+            var loginEmail = $("input[name = 'loginEmail']").val();
+            var loginSenha = $("input[name = 'loginSenha']").val();
+            $.post("verifica-login.php", {email: loginEmail, senha: loginSenha}, function(resultado){
+                if(resultado == "nExiste"){
+                    $(".erro").show();
+                }else{
+                    $(".erro").hide();
+                    window.location.href = "verifica-nome.php?email=" + loginEmail;
+                }
+            });
+        });
+    });
 </script>
 
 </html>

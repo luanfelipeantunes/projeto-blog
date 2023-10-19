@@ -1,7 +1,7 @@
 <?php 
 
-    $email = $_REQUEST['loginEmail'];
-    $senha = $_REQUEST['loginSenha'];
+    $email = $_REQUEST['email'];
+    $senha = $_REQUEST['senha'];
 
     $conexao = new mysqli("localhost", "root", "123456", "cadastro");
 
@@ -16,7 +16,7 @@
     if($resultado->num_rows > 0){
         header("Location: verifica-nome.php?email=$email");
     }else{
-        header("Location: index.html");
+        echo "nExiste"; 
     }
 
 ?>
